@@ -15,7 +15,16 @@ function convertToSeconds(min,sec){
 function getHumanReadableOutput(seconds){
   let minuteValue = Math.floor(seconds / 60);
   let secondValue = seconds % 60;
+  secondValue = String(secondValue);
+
+    if (secondValue.length <= 1){
+      secondValue = "0" + secondValue
+    }
+    else{
+    }
+
   let humanReadableOutput = minuteValue + ":" + secondValue;
+
   return humanReadableOutput;
 }
 
