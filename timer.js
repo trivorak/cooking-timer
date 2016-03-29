@@ -8,7 +8,8 @@ totalSeconds = parseInt(seconds);
 //Converts time in minutes and seconds and then sets timers duration directly
 function convertToSeconds(min,sec){
   let minutes = parseInt(min * 60);
-  totalSeconds = parseInt(min + sec);
+  let seconds = parseInt(sec);
+  totalSeconds = parseInt(minutes + seconds);
 }
 
 //Converts time(in seconds) into a readable minutes:seconds ex. 2:35
