@@ -7,14 +7,14 @@ function setTimer(seconds){
 totalSeconds = parseInt(seconds);
 }
 
-//Converts time in minutes and seconds and then sets timers duration directly
+//Returns converts time in minutes and seconds
 function convertToSeconds(min,sec){
   let minutes = parseInt(min * 60);
   let seconds = parseInt(sec);
   return parseInt(minutes + seconds);
 }
 
-//Converts time(in seconds) into a readable minutes:seconds ex. 2:35
+//Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
 function getHumanReadableOutput(seconds){
   let minuteValue = Math.floor(seconds / 60);
   let secondValue = seconds % 60;
