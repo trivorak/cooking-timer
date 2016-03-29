@@ -1,4 +1,6 @@
+
 var totalSeconds = 0;
+
 
 //Set timer directly in seconds
 function setTimer(seconds){
@@ -9,7 +11,7 @@ totalSeconds = parseInt(seconds);
 function convertToSeconds(min,sec){
   let minutes = parseInt(min * 60);
   let seconds = parseInt(sec);
-  totalSeconds = parseInt(minutes + seconds);
+  return parseInt(minutes + seconds);
 }
 
 //Converts time(in seconds) into a readable minutes:seconds ex. 2:35
@@ -50,4 +52,10 @@ function decreaseTime(){
 //function for console log display using the getHumanReadableOutput function for formatting
 function logRemainingTime(time){
   console.log(getHumanReadableOutput(time));
+}
+
+function reset(){
+  totalSeconds = 0;
+  setTimer(parseInt(dish.time));
+  console.log(totalSeconds);
 }
