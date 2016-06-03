@@ -1,65 +1,50 @@
-module.exports = timerInit;
+module.exports = class Timer{
 
-var totalSeconds = 0;
+  constructor(){
+    this.totalSeconds = 0;
+    console.log("Yo Stuff Isn't Broken ... Yet");
+  }
 
-function timerInit(){
-  console.log("Start");
-}
+  setTimer(seconds){
+    this.totalSeconds = (seconds);
+  }
 
-//Set timer directly in seconds
-function setTimer(seconds){
-totalSeconds = parseInt(seconds);
-}
+  //Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
+  getHumanReadableOutput(seconds){
+    var minuteValue = Math.floor(seconds/60);
+    var secondValue = seconds % 60;
+    secondValue = String(secondValue);
 
-//Returns converts time in minutes and seconds
-function convertToSeconds(min,sec){
-  let minutes = parseInt(min * 60);
-  let seconds = parseInt(sec);
-  return parseInt(minutes + seconds);
-}
+      if (secondValue.length <= 1){
+        secondValue = "0" + secondValue
+      }
+      else{
+      }
 
-//Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
-function getHumanReadableOutput(seconds){
-  let minuteValue = Math.floor(seconds / 60);
-  let secondValue = seconds % 60;
-  secondValue = String(secondValue);
+      var humanReadableOutput = minuteValue + ":" + secondValue;
 
-    if (secondValue.length <= 1){
-      secondValue = "0" + secondValue
+      return humanReadableOutput;
+  }
+
+  startTimer(){
+    if (this.totalSeconds <= 0){
+      console.log("Finished");
     }
     else{
+      setTimeout(() =>{
+        this.decreaseTime();
+        this.logRemainingTime(this.totalSeconds);
+        this.startTimer();
+      } ,1000);
     }
-
-  let humanReadableOutput = minuteValue + ":" + secondValue;
-
-  return humanReadableOutput;
-}
-
-//Startup Countdown Timer
-function startTimer(){
-  if (totalSeconds <= 0){
-    console.log("Yo Shit's Done!");
-  } else {
-    setTimeout(() =>{
-      decreaseTime();
-      logRemainingTime(totalSeconds);
-      startTimer();
-      },1000);
   }
-}
 
-//Subtracts 1 from the total time at the interval of the timerLoop
-function decreaseTime(){
-  totalSeconds = totalSeconds - 1;
-}
+  decreaseTime(){
+    this.totalSeconds = this.totalSeconds - 1;
+  }
 
-//function for console log display using the getHumanReadableOutput function for formatting
-function logRemainingTime(time){
-  console.log(getHumanReadableOutput(time));
-}
+  logRemainingTime(time){
+    console.log(this.getHumanReadableOutput(time));
+  }
 
-function reset(){
-  totalSeconds = 0;
-  setTimer(parseInt(dish.time));
-  console.log(totalSeconds);
 }

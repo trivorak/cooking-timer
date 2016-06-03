@@ -1,3 +1,3 @@
-var timerInit = require("./timer.js");
+var Timer = require("./timer.js");
 
-timerInit();
+window.timer = new Timer();
