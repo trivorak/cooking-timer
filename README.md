@@ -6,7 +6,8 @@ A timer with the ability to save user presets(time) for cooking different dishes
 
 + ~~Build Initial "Test" Script~~
 + ~~Seconds Character Length Fix~~
-+ Expand Build Into Separate Classes
++ ~~Expand Build Into Separate Classes~~
++ Import/Export
 + Structure Files for expandability
 + HTML w/ DOM integration
 + Build Unit Test
@@ -14,5 +15,5 @@ A timer with the ability to save user presets(time) for cooking different dishes
 + Setup Database for Preset Storage
 + Enable Preset writing to Database
 + Deploy to Heroku for testing
-+ Incorporate NodeJS
++ ~~Incorporate NodeJS~~
 + Build Android App
