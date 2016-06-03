@@ -1,0 +1,23 @@
+{
+  "name": "cooking-timer",
+  "version": "1.0.0",
+  "description": "A timer with the ability to save user presets(time) for cooking different dishes.",
+  "main": "cooking-dishes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && browserify app.js > dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trivorak/cooking-timer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trivorak/cooking-timer/issues"
+  },
+  "homepage": "https://github.com/trivorak/cooking-timer#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}

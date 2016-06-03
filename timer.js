@@ -1,6 +1,10 @@
+module.exports = timerInit;
 
 var totalSeconds = 0;
 
+function timerInit(){
+  console.log("Start");
+}
 
 //Set timer directly in seconds
 function setTimer(seconds){
