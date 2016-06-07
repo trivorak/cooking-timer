@@ -1,7 +1,8 @@
-export const cookingDishes = [
-  {
-    "name":"Buffalo Wings",
-    "description":"Regular Bone-in",
-    "time":"510",
-  }
-]
+
+var dishes = {
+  buffaloWings: 510,
+  bbqWings : 1800,
+  checkerFries : 210,
+}
+
+module.exports = dishes
