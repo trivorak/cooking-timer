@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p dist && browserify app.js > dist/bundle.js",
-    "watch": "watchify app.js -o dist/bundle.js",
-    "livereload": "livereloadify ./",
-    "start": "npm run watch & npm run livereload"
+    "watch": "watchify app.js -o dist/bundle.js | wtch dist/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +20,7 @@
   "homepage": "https://github.com/trivorak/cooking-timer#readme",
   "devDependencies": {
     "browserify": "^13.0.1",
-    "livereloadify": "^2.0.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "wtch": "^4.0.1"
   }
 }
