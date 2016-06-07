@@ -1,8 +1,29 @@
 
-var dishes = {
-  buffaloWings: 510,
-  bbqWings : 1800,
-  checkerFries : 210,
-}
+var dishes = [
+  {
+     name: 'Bufflo Wings',
+     method: 'fried',
+     time: 510,
+     arthor: 'DC'
+  },
+  {
+     name: 'Bufflo Wings',
+     method: 'bbq',
+     time: 1800,
+     arthor: 'DC'
+  },
+  {
+     name: 'Checkers Fries',
+     method: 'fried',
+     time: 210,
+     arthor: 'DC'
+  },
+  {
+    name: 'Chicken',
+    method: 'bbq',
+    time: 3600,
+    arthor: 'DC'
+  }
+]
 
 module.exports = dishes
