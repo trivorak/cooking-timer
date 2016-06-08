@@ -9,7 +9,7 @@ A timer with the ability to save user presets(time) for cooking different dishes
 + ~~Expand Build Into Separate Classes~~
 + Import/Export
 + Structure Files for expandability
-+ HTML w/ DOM integration
++ ~~Basic HTML w/ DOM integration~~
 + Build Unit Test
 + Incorporate the ability to pull information from presets
 + Setup Database for Preset Storage
