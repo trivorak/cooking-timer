@@ -1,7 +1,7 @@
 
 var dishes = [
   {
-     name: 'Bufflo Wings',
+     name: 'Buffalo Wings',
      method: 'fried',
      time: 510,
      arthor: 'DC'
