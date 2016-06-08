@@ -4,6 +4,8 @@ var dishes = require("./cooking-dishes.js");
 
 var timer = new Timer();
 
+console.log("Let's Get Cooking");
+
 renderView(timer);
 
 window.timer = timer;

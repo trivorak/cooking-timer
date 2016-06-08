@@ -2,7 +2,6 @@ module.exports = class Timer{
 
   constructor(){
     this.totalSeconds = 0;
-    console.log("Let's Cook");
   }
 
   setTimer(seconds){
