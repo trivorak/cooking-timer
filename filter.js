@@ -18,4 +18,10 @@ module.exports = class filter{
       return dish.name === name;
     });
   }
+
+  getDishById(id){
+    return dishes.find(function(dish){
+      return dish.id === id;
+    });
+  }
 }
