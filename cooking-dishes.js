@@ -7,7 +7,7 @@ var dishes = [
      arthor: 'DC'
   },
   {
-     name: 'Bufflo Wings',
+     name: 'Buffalo Wings',
      method: 'bbq',
      time: 1800,
      arthor: 'DC'
