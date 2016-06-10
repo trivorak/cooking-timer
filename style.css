@@ -1,0 +1,54 @@
+.time{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+button{
+  border-radius: 0px;
+  height: 50px;
+  font-family:sans-serif;
+  font-size: 19px;
+  color: #fff;
+  background-color: #333;
+  border-style: none;
+  display: inline-block;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border-radius: 0px;
+   height: 50px;
+   font-stretch: normal;
+   font-size: 20px;
+   color: #333;
+   background-color: #fff;
+   text-align-last:center;
+   display: inline-block;
+   float: left;
+}
+
+.container{
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.form-container{
+  width: 239px;
+  margin: 0 auto;
+}
+
+.font-container{
+  margin: auto;
+  width: 75%;
+  text-align-last: center;
+}
+
+body{
+  background-color: #c7c7c7;
+}

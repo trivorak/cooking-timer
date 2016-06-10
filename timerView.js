@@ -14,7 +14,6 @@ function renderView(timer){
   });
 }
 
-
 var select = document.getElementById("selectDish");
 var options = dishes;
 

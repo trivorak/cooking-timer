@@ -52,7 +52,17 @@ module.exports = class Timer{
   }
 
   getSeconds(totalSeconds){
-    return totalSeconds % 60;
+    // return totalSeconds % 60;
+    var secondValue = totalSeconds % 60;
+    secondValue = String(secondValue);
+    if (secondValue.length <= 1){
+      secondValue = "0" + secondValue
+    }
+    else{
+    }
+
+    return secondValue;
+
   }
 
   updateHTMLTime(totalSeconds){

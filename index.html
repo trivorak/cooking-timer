@@ -3,21 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Cooking Timer</title>
   </head>
 
   <body>
-
+    <div class="container">
+      <div class="form-container">
     <form id="timer-input"><br>
-        <select id ="selectDish">
+        <select class="select"id ="selectDish">
           <option>Choose a Dish</option><br><br>
         </select>
-      <button>Start Timer</button>
+      <button>Start</button>
     </form>
-  <div id="minutes">time</div>
-  <div id="seconds">time</div>
-    <script src="dist/bundle.js"></script>
+    <div class="font-container">
+      <div class="time" id="minutes"></div>
+      <div class="time">:</div>
+      <div class="time" id="seconds"></div>
+    </div>
+      </div>
+    </div>
 
+  <script src="dist/bundle.js"></script>
   </body>
 
 
