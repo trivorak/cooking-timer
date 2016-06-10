@@ -8,10 +8,6 @@ var filter = new Filter();
 
 console.log("Let's Get Cooking");
 
-// var dish = sortByName('Checkers Fries');
-// timer.setTimer(dish.time);
-// timer.startTimer();
-
 renderView(timer);
 
 window.timer = timer;

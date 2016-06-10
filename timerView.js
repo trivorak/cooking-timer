@@ -11,15 +11,11 @@ function renderView(timer){
   document.getElementById("timer-input").addEventListener("submit",function(event){
     startTimer(event,timer);
   });
+  document.getElementById("selectDish").addEventListener("onselect",function(event){
+    console.log("yes");
+  });
   }
 
-// function startTimer(event,timer){
-//   event.preventDefault();
-//   var name = document.getElementById("name").value;
-//   var dish = filter.getDish(name);
-//   timer.setTimer(dish.time);
-//   timer.startTimer();
-//   }
 
 var select = document.getElementById("selectDish");
 var options = dishes;
@@ -39,5 +35,3 @@ for(var i = 0; i < options.length; i++) {
   el.value = opt.id;
   select.appendChild(el);
 };
-
-console.log(dishes);

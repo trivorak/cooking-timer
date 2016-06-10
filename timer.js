@@ -10,8 +10,8 @@ module.exports = class Timer{
 
   //Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
   getHumanReadableOutput(seconds){
-    var minuteValue = Math.floor(seconds/60);
-    var secondValue = seconds % 60;
+    var minuteValue = this.getMinutes(seconds);
+    var secondValue = this.getSeconds(seconds);
     secondValue = String(secondValue);
 
       if (secondValue.length <= 1){
@@ -46,4 +46,11 @@ module.exports = class Timer{
     console.log(this.getHumanReadableOutput(time));
   }
 
+  getMinutes(totalSeconds){
+    return Math.floor(totalSeconds/60);
+  }
+
+  getSeconds(totalSeconds){
+    return totalSeconds % 60;
+  }
 }
