@@ -10,11 +10,9 @@ function renderView(timer){
   console.log(timer);
   document.getElementById("timer-input").addEventListener("submit",function(event){
     startTimer(event,timer);
+    initialSetHTMLTime(event,timer);
   });
-  document.getElementById("selectDish").addEventListener("onselect",function(event){
-    console.log("yes");
-  });
-  }
+}
 
 
 var select = document.getElementById("selectDish");
@@ -26,6 +24,16 @@ function startTimer(event,timer){
   var selectedDish = filter.getDishById(selected);
   timer.setTimer(selectedDish.time);
   timer.startTimer();
+}
+
+function initialSetHTMLTime(event,timer){
+  event.preventDefault();
+  var selected = select.options[select.selectedIndex].value;
+  var selectedDish = filter.getDishById(selected);
+  var minutes = timer.getMinutes(selectedDish.time);
+  var seconds = timer.getSeconds(selectedDish.time);
+  document.getElementById('minutes').innerHTML = minutes;
+  document.getElementById('seconds').innerHTML = seconds;
 }
 
 for(var i = 0; i < options.length; i++) {

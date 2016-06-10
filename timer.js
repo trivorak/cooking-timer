@@ -34,6 +34,7 @@ module.exports = class Timer{
         this.decreaseTime();
         this.logRemainingTime(this.totalSeconds);
         this.startTimer();
+        this.updateHTMLTime();
       } ,1000);
     }
   }
@@ -52,5 +53,10 @@ module.exports = class Timer{
 
   getSeconds(totalSeconds){
     return totalSeconds % 60;
+  }
+
+  updateHTMLTime(totalSeconds){
+    document.getElementById('minutes').innerHTML = this.getMinutes(this.totalSeconds);
+    document.getElementById('seconds').innerHTML = this.getSeconds(this.totalSeconds);
   }
 }
