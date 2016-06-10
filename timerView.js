@@ -1,5 +1,4 @@
 module.exports = renderView;
-var convertToSeconds = require("./convertToSeconds.js");
 var filter = require("./filter.js");
 var dishes = require("./cooking-dishes.js");
 
