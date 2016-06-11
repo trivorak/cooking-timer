@@ -1,4 +1,4 @@
-module.exports = class Timer{
+export default class Timer{
 
   constructor(){
     this.totalSeconds = 0;

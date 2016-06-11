@@ -1,4 +1,4 @@
-import dishes from './dishes.js';
+import { dishes } from './cooking-dishes.js';
 
 export default class Filter{
 // Setup

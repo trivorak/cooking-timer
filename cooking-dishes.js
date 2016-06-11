@@ -1,5 +1,5 @@
 
-export default const dishes = [
+export const dishes = [
   {
      id: '1',
      name: 'Buffalo Wings',

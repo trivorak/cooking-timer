@@ -1,12 +1,10 @@
-module.exports = renderView;
 import Filter from './filter.js';
-
-var dishes = require("./cooking-dishes.js");
+import { dishes } from "./cooking-dishes.js";
 
 
 var filter = new Filter();
 
-function renderView(timer){
+export default function renderView(timer){
   console.log(timer);
   document.getElementById("timer-input").addEventListener("submit",function(event){
     startTimer(event,timer);

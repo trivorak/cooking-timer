@@ -1,7 +1,7 @@
-var Timer = require("./timer.js");
-var renderView = require("./timerView.js");
-var dishes = require("./cooking-dishes.js");
-var Filter = require("./filter.js");
+import Timer from "./timer.js";
+import renderView from "./timerView.js";
+import dishes from "./cooking-dishes.js";
+import Filter from "./filter.js";
 
 var timer = new Timer();
 var filter = new Filter();
