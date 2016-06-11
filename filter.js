@@ -1,8 +1,9 @@
-var dishes = require("./cooking-dishes.js");
-module.exports = class filter{
+import dishes from './dishes.js';
 
+export default class Filter{
 // Setup
   constructor(){
+    console.log("working?");
   }
 
 // Returns Dishes With Matching Method

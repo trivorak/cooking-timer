@@ -1,9 +1,10 @@
 module.exports = renderView;
-var filter = require("./filter.js");
+import Filter from './filter.js';
+
 var dishes = require("./cooking-dishes.js");
 
 
-var filter = new filter();
+var filter = new Filter();
 
 function renderView(timer){
   console.log(timer);

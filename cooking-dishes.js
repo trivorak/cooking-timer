@@ -1,5 +1,5 @@
 
-var dishes = [
+export default const dishes = [
   {
      id: '1',
      name: 'Buffalo Wings',
@@ -29,5 +29,3 @@ var dishes = [
     arthor: 'DC'
   }
 ]
-
-module.exports = dishes
