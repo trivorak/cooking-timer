@@ -32,7 +32,7 @@ export default class Timer{
     else{
       setTimeout(() =>{
         this.decreaseTime();
-        this.logRemainingTime(this.totalSeconds);
+        // this.logRemainingTime(this.totalSeconds);
         this.startTimer();
         this.updateHTMLTime();
       } ,1000);
@@ -41,10 +41,6 @@ export default class Timer{
 
   decreaseTime(){
     this.totalSeconds = this.totalSeconds - 1;
-  }
-
-  logRemainingTime(time){
-    console.log(this.getHumanReadableOutput(time));
   }
 
   getMinutes(totalSeconds){

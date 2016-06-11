@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p dist && browserify -t [ babelify --presets [ es2015 stage-0 ] ] app.js > dist/bundle.js",
-    "watch": "watchify app.js -o dist/bundle.js | wtch dist/bundle.js"
+    "watch": "watchify app.js -o dist/bundle.js -t [ babelify --presets [ es2015 stage-0 ] ] | wtch dist/bundle.js"
   },
   "repository": {
     "type": "git",
