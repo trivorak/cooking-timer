@@ -27,5 +27,5 @@ export const dishes = [
     method: 'bbq',
     time: 3600,
     arthor: 'DC'
-  }
+  },
 ]

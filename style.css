@@ -68,4 +68,6 @@ body{
 
 .logo{
   margin: 5px;
+  position: relative;
+  left: 8px;
 }
