@@ -7,7 +7,7 @@ A timer with the ability to save user presets(time) for cooking different dishes
 + ~~Build Initial "Test" Script~~
 + ~~Seconds Character Length Fix~~
 + ~~Expand Build Into Separate Classes~~
-+ Import/Export
++ ~~Import/Export~~
 + Structure Files for expandability
 + ~~Basic HTML w/ DOM integration~~
 + Build Unit Test
