@@ -2,6 +2,7 @@ export default class Timer{
 
   constructor(){
     this.totalSeconds = 0;
+    this.stopFlag = false;
   }
 
   setTimer(seconds){
@@ -28,6 +29,9 @@ export default class Timer{
   startTimer(){
     if (this.totalSeconds <= 0){
       console.log("Finished");
+    }
+    else if (this.stopFlag === true) {
+      console.log("Stopped");
     }
     else{
       setTimeout(() =>{
@@ -58,6 +62,20 @@ export default class Timer{
 
     return secondValue;
 
+  }
+
+  stopTimer(){
+    this.stopFlag = true ;
+  }
+
+  resumeTimer(){
+    this.stopFlag = false;
+    this.startTimer();
+  }
+
+  resetTimer(){
+    this.totalSeconds = 0;
+    this.updateHTMLTime(this.totalSeconds);
   }
 
   updateHTMLTime(totalSeconds){
