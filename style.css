@@ -71,3 +71,20 @@ body{
   position: relative;
   left: 8px;
 }
+
+.nav-text{
+  position: absolute;
+  font-size: 10px;
+  color: #5e5e5e;
+  font-family:sans-serif;
+  top: 76px;
+}
+
+.footer{
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #000;
+  position: relative;
+  right: -271px;
+  bottom: 0px;
+}
