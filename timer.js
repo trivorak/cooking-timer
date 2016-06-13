@@ -30,7 +30,7 @@ export default class Timer{
     if (this.totalSeconds <= 0){
       console.log("Finished");
     }
-    else if (this.stopFlag === true) {
+    else if (this.stopFlag) {
       console.log("Stopped");
     }
     else{
