@@ -19,7 +19,10 @@ function startTimer(event,timer){
   event.preventDefault();
   var selected = select.options[select.selectedIndex].value;
   var selectedDish = filter.getDishById(selected);
+  var dishDiscrption = selectedDish.name;
+  var dishMethod = selectedDish.method;
   timer.setTimer(selectedDish.time);
+  document.getElementById('description').innerHTML = dishDiscrption;
   timer.startTimer();
 }
 

@@ -1,9 +1,7 @@
 .time{
-  display: inline-block;
   margin: 0 auto;
-  padding: 10px;
   display: inline-block;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 button{
@@ -47,7 +45,6 @@ select {
 
 .font-container{
   margin: auto;
-  width: 75%;
   text-align-last: center;
 }
 
@@ -78,4 +75,14 @@ body{
   color: #5e5e5e;
   font-family:sans-serif;
   top: 76px;
+}
+
+.description{
+  font-size: 15px;
+  color: #333;
+  float: inherit;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  display: inline-block;
 }

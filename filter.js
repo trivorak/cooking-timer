@@ -3,7 +3,6 @@ import { dishes } from './cooking-dishes.js';
 export default class Filter{
 // Setup
   constructor(){
-    console.log("working?");
   }
 
 // Returns Dishes With Matching Method
