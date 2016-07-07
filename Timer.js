@@ -4,6 +4,8 @@ export default class Timer{
     this.totalSeconds = 0;
     this.stopFlag = false;
     this._callbacks = [];
+    this._isRunning = false;
+    this._timerId = null;
   }
 
   setTimer(seconds){
@@ -28,20 +30,20 @@ export default class Timer{
   }
 
   startTimer(){
-    if (this.totalSeconds <= 0){
-      console.log("Finished");
-    }
-    else if (this.stopFlag) {
-      console.log("Stopped");
-    }
-    else{
-      setTimeout(() =>{
-        this.decreaseTime();
-        // this.logRemainingTime(this.totalSeconds);
-        this.startTimer();
-        this._callbacks.forEach(cb => cb());
-      } ,1000);
-    }
+    if (this._isRunning) return;
+    this._isRunning = true;
+
+    this._timerId = setInterval(() =>{
+      if (this.totalSeconds <= 0){
+        this.stopTimer();
+        console.log("Finished");
+        return;
+      }
+
+      this.decreaseTime();
+      // this.logRemainingTime(this.totalSeconds);
+      this._callbacks.forEach(cb => cb());
+    }, 1000);
   }
 
   decreaseTime(){
@@ -66,6 +68,8 @@ export default class Timer{
   }
 
   stopTimer(){
+    clearInterval(this._timerId);
+    this._isRunning = false;
     this.stopFlag = true ;
   }
 

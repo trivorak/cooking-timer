@@ -9,6 +9,7 @@ const TIMER_VIEW_HTML =
   </div>`;
 
 export default class TimerView {
+
   constructor(containerElement, dish) {
     this._containerElement = document.querySelector(containerElement);
     this.element = document.createElement('div');
@@ -17,7 +18,6 @@ export default class TimerView {
     this.timer = new Timer();
     this.timer.setTimer(dish.time);
     this.timer.onChange(this.render.bind(this));
-    this.timer.onChange(() => console.log('shit'));
 
     this.init();
   }
@@ -30,14 +30,12 @@ export default class TimerView {
   }
 
   render() {
-    const { dish } = this;
-
-    var minutes = this.timer.getMinutes(dish.time);
-    var seconds = this.timer.getSeconds(dish.time);
+    var minutes = this.timer.getMinutes();
+    var seconds = this.timer.getSeconds();
 
     this.element.querySelector('.minutes').innerHTML = minutes;
     this.element.querySelector('.seconds').innerHTML = seconds;
 
-    this.element.querySelector('.description').innerHTML = dish.name;
+    this.element.querySelector('.description').innerHTML = this.dish.name;
   }
 }

@@ -3,7 +3,7 @@ import TimerView from './TimerView.js';
 const TIMER_FORM_HTML =
   `<form class="timer-form"><br>
     <select class="select" id="selectDish">
-      <option>Choose a Dish</option><br><br>
+      <option value="">Choose a Dish</option><br><br>
     </select>
     <button class="add-timer-btn">Add</button>
     <button class="start-timers-btn">Start</button>
@@ -42,6 +42,8 @@ export default class TimerForm {
       .addEventListener("click", event => {
         event.preventDefault();
         const select = form.querySelector("select");
+        if (!select.value) return;
+
         const dish = this._getDishById(select.value);
         this.addTimer(dish);
       });
