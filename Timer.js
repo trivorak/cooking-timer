@@ -3,6 +3,7 @@ export default class Timer{
   constructor(){
     this.totalSeconds = 0;
     this.stopFlag = false;
+    this._callbacks = [];
   }
 
   setTimer(seconds){
@@ -10,9 +11,9 @@ export default class Timer{
   }
 
   //Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
-  getHumanReadableOutput(seconds){
-    var minuteValue = this.getMinutes(seconds);
-    var secondValue = this.getSeconds(seconds);
+  getHumanReadableOutput(){
+    var minuteValue = this.getMinutes();
+    var secondValue = this.getSeconds();
     secondValue = String(secondValue);
 
       if (secondValue.length <= 1){
@@ -38,7 +39,7 @@ export default class Timer{
         this.decreaseTime();
         // this.logRemainingTime(this.totalSeconds);
         this.startTimer();
-        this.updateHTMLTime();
+        this._callbacks.forEach(cb => cb());
       } ,1000);
     }
   }
@@ -47,12 +48,12 @@ export default class Timer{
     this.totalSeconds = this.totalSeconds - 1;
   }
 
-  getMinutes(totalSeconds){
-    return Math.floor(totalSeconds/60);
+  getMinutes(){
+    return Math.floor(this.totalSeconds/60);
   }
 
-  getSeconds(totalSeconds){
-    var secondValue = totalSeconds % 60;
+  getSeconds(){
+    var secondValue = this.totalSeconds % 60;
     secondValue = String(secondValue);
     if (secondValue.length <= 1){
       secondValue = "0" + secondValue
@@ -75,11 +76,10 @@ export default class Timer{
 
   resetTimer(){
     this.totalSeconds = 0;
-    this.updateHTMLTime(this.totalSeconds);
+    this._callbacks.forEach(cb => cb());
   }
 
-  updateHTMLTime(totalSeconds){
-    document.getElementById('minutes').innerHTML = this.getMinutes(this.totalSeconds);
-    document.getElementById('seconds').innerHTML = this.getSeconds(this.totalSeconds);
+  onChange(callback) {
+    this._callbacks.push(callback);
   }
 }

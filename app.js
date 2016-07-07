@@ -1,13 +1,7 @@
-import Timer from "./timer.js";
-import renderView from "./timerView.js";
-import dishes from "./cooking-dishes.js";
-import Filter from "./filter.js";
+import { dishes } from "./cooking-dishes.js";
+import TimerForm from "./TimerForm.js";
 
-var timer = new Timer();
-var filter = new Filter();
+var timerForm = new TimerForm('.form-container', dishes);
+timerForm.render();
 
 console.log("Let's Get Cooking");
-
-renderView(timer);
-
-window.timer = timer;
