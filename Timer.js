@@ -20,8 +20,6 @@ export default class Timer{
       if (secondValue.length <= 1){
         secondValue = "0" + secondValue
       }
-      else{
-      }
 
       var humanReadableOutput = minuteValue + ":" + secondValue;
 
@@ -58,8 +56,6 @@ export default class Timer{
     secondValue = String(secondValue);
     if (secondValue.length <= 1){
       secondValue = "0" + secondValue
-    }
-    else{
     }
 
     return secondValue;

@@ -1,4 +1,4 @@
-import Timer from './Timer.js';
+import Timer from "./Timer.js";
 
 const TIMER_VIEW_HTML =
   `<div class="font-container">
@@ -12,7 +12,7 @@ export default class TimerView {
 
   constructor(containerElement, dish) {
     this._containerElement = document.querySelector(containerElement);
-    this.element = document.createElement('div');
+    this.element = document.createElement("div");
     this.dish = dish;
 
     this.timer = new Timer();
@@ -33,9 +33,9 @@ export default class TimerView {
     var minutes = this.timer.getMinutes();
     var seconds = this.timer.getSeconds();
 
-    this.element.querySelector('.minutes').innerHTML = minutes;
-    this.element.querySelector('.seconds').innerHTML = seconds;
+    this.element.querySelector(".minutes").innerHTML = minutes;
+    this.element.querySelector(".seconds").innerHTML = seconds;
 
-    this.element.querySelector('.description').innerHTML = this.dish.name;
+    this.element.querySelector(".description").innerHTML = this.dish.name;
   }
 }

@@ -1,4 +1,4 @@
-import TimerView from './TimerView.js';
+import TimerView from "./TimerView.js";
 
 const TIMER_FORM_HTML =
   `<form class="timer-form"><br>
@@ -24,7 +24,7 @@ export default class TimerForm {
   }
 
   addTimer(dish) {
-    let timerView = new TimerView('.timers-container', dish);
+    let timerView = new TimerView(".timers-container", dish);
     this._timerViews.push(timerView);
   }
 
@@ -68,7 +68,7 @@ export default class TimerForm {
       var el = document.createElement("option");
       el.textContent = opt.name + " (" + opt.method + ")";
       el.value = opt.id;
-      this._containerElement.querySelector('select').appendChild(el);
+      this._containerElement.querySelector("select").appendChild(el);
     };
   }
 }
