@@ -2,7 +2,6 @@ export default class Timer{
 
   constructor(){
     this.totalSeconds = 0;
-    this.stopFlag = false;
     this._callbacks = [];
     this._isRunning = false;
     this._timerId = null;
@@ -70,11 +69,9 @@ export default class Timer{
   stopTimer(){
     clearInterval(this._timerId);
     this._isRunning = false;
-    this.stopFlag = true ;
   }
 
   resumeTimer(){
-    this.stopFlag = false;
     this.startTimer();
   }
 
