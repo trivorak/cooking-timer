@@ -28,4 +28,11 @@ export const dishes = [
     time: 3600,
     arthor: 'DC'
   },
+  {
+    id : '5',
+    name: 'Tenders',
+    method: 'fried',
+    time: 330,
+    arthor: 'DC'
+  },
 ]

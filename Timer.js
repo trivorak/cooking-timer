@@ -2,13 +2,13 @@ export default class Timer{
 
   constructor(){
     this.totalSeconds = 0;
-    this._callbacks = [];
     this._isRunning = false;
     this._timerId = null;
+    this._onChangeCallbacks = [];
   }
 
   setTimer(seconds){
-    this.totalSeconds = (seconds);
+    this.totalSeconds = seconds;
   }
 
   //Converts time(in seconds) into a readable minutes:seconds (ex. 2:35)
@@ -30,8 +30,8 @@ export default class Timer{
     if (this._isRunning) return;
     this._isRunning = true;
 
-    this._timerId = setInterval(() =>{
-      if (this.totalSeconds <= 0){
+    this._timerId = setInterval(() => {
+      if (this.totalSeconds <= 0) {
         this.stopTimer();
         console.log("Finished");
         return;
@@ -39,7 +39,7 @@ export default class Timer{
 
       this.decreaseTime();
       // this.logRemainingTime(this.totalSeconds);
-      this._callbacks.forEach(cb => cb());
+      this._onChangeCallbacks.forEach(cb => cb());
     }, 1000);
   }
 
@@ -73,10 +73,10 @@ export default class Timer{
 
   resetTimer(){
     this.totalSeconds = 0;
-    this._callbacks.forEach(cb => cb());
+    this._onChangeCallbacks.forEach(cb => cb());
   }
 
   onChange(callback) {
-    this._callbacks.push(callback);
+    this._onChangeCallbacks.push(callback);
   }
 }
