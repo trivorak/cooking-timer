@@ -33,6 +33,7 @@ select {
 .container{
   width: 400px;
   margin: -8px auto;
+  padding: 0 0 10px 0;
   background-color: #fff;
   position: relative;
   top: 90px;
